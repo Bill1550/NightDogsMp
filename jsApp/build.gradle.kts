@@ -22,14 +22,10 @@ dependencies {
     implementation(npm("react-dom", "16.13.1"))
 }
 
-println("ProjectDir=$projectDir")
 kotlin {
 
     js {
         browser {
-//            distribution {
-//                directory = File("$projectDir/build/distribution")
-//            }
             webpackTask {
                 cssSupport.enabled = true
             }
@@ -45,8 +41,14 @@ kotlin {
                 }
             }
 
+//            dceTask {
+//                dceOptions {
+//                    outputDirectory = "$projectDir\\build\\js\\packages\\kotlin-dce-dev"  //"$buildDir/js/packages/${project.name}/kotlin-dce-dev"
+//                }
+//            }
 
         }
+
         binaries.executable()
     }
 
