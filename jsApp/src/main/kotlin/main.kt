@@ -1,3 +1,4 @@
+import com.loneoaktech.tests.nightdogsmp.shared.Greeting
 import kotlinx.browser.document
 import react.dom.*
 
@@ -11,6 +12,9 @@ fun main() {
             h3 { +"Overview" }
             p {
                 +"An small example using Kotlin/JS with React"
+            }
+            p{
+                +"MP greeting: ${Greeting().greeting()}"
             }
         }
         div {
