@@ -12,8 +12,8 @@ repositories {
     gradlePluginPortal()
     google()
     jcenter()
-    mavenCentral()
 }
+
 kotlin {
     android()
     ios {
@@ -32,7 +32,16 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+//                api( Deps.kodein )
+                implementation( Deps.kotlinx_coroutines )
+                implementation( Deps.ktor_client )
+                api( Deps.klock )
+            }
+        }
+
+
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
@@ -63,6 +72,7 @@ kotlin {
         }
     }
 }
+
 android {
     compileSdkVersion(29)
     sourceSets["main"].manifest.srcFile("src\\androidMain\\AndroidManifest.xml")
