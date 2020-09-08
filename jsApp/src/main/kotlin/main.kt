@@ -1,10 +1,12 @@
 import com.loneoaktech.tests.nightdogsmp.shared.Greeting
+import com.soywiz.klogger.Logger
 import kotlinx.browser.document
 import react.dom.*
 
 fun main() {
 //    document.write("Hello, Kotlin!")
 //    document.bgColor = "green"
+    Logger.defaultLevel = Logger.Level.DEBUG
 
     render( document.getElementById("root") ) {
         h1 { + "Kotlin React 2020" }

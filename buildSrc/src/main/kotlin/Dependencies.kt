@@ -7,6 +7,7 @@ object Versions {
     const val android_gradle_plugin = "4.1.0-rc02"
 
     const val klock = "1.12.0"
+    const val klogger = "1.11.0"
 
     const val kodein = "7.0.0" // not compatible with kotlin 1.4.0
 
@@ -22,6 +23,8 @@ object Versions {
 
 object Deps {
     const val klock = "com.soywiz.korlibs.klock:klock:${Versions.klock}"
+
+    const val klogger = "com.soywiz.korlibs.klogger:klogger:${Versions.klogger}"
 
     val kodein = "org.kodein.di:kodein-di:${Versions.kodein}"
 

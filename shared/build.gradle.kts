@@ -38,6 +38,7 @@ kotlin {
                 implementation( Deps.kotlinx_coroutines )
                 implementation( Deps.ktor_client )
                 api( Deps.klock )
+                api( Deps.klogger )
             }
         }
 
