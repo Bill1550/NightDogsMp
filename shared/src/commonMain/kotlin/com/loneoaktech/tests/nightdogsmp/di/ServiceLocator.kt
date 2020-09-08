@@ -1,5 +1,7 @@
 package com.loneoaktech.tests.nightdogsmp.di
 
+import com.loneoaktech.tests.nightdogsmp.domain.api.HttpClientFactory
+import com.loneoaktech.tests.nightdogsmp.domain.repos.AstronomicalRepo
 import kotlin.coroutines.CoroutineContext
 
 /**
@@ -8,4 +10,8 @@ import kotlin.coroutines.CoroutineContext
 interface ServiceLocator {
 
     val ioDispatcher: CoroutineContext
+
+    val httpClientFactory: HttpClientFactory
+
+    val astronomicalRepo: AstronomicalRepo
 }

@@ -26,11 +26,16 @@ object Deps {
 
     const val klogger = "com.soywiz.korlibs.klogger:klogger:${Versions.klogger}"
 
-    val kodein = "org.kodein.di:kodein-di:${Versions.kodein}"
+    const val kodein = "org.kodein.di:kodein-di:${Versions.kodein}"
 
-    val kotlinx_coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinx_coroutines}"
-    val kotlinx_datetime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinx_datetime}"
-    val kotlinx_serialization = "org.jetbrains.kotlinx:kotlinx-serialization-core${Versions.kotlinx_serialization}"
+    const val kotlinx_coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinx_coroutines}"
+    const val kotlinx_datetime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinx_datetime}"
+    const val kotlinx_serialization = "org.jetbrains.kotlinx:kotlinx-serialization-core${Versions.kotlinx_serialization}"
 
-    val ktor_client = "io.ktor:ktor-client-core:${Versions.ktor}"
+    const val ktor_client = "io.ktor:ktor-client-core:${Versions.ktor}"
+    const val ktor_client_json = "io.ktor:ktor-client-json:${Versions.ktor}"
+    const val ktor_client_logging = "io.ktor:ktor-client-logging:${Versions.ktor}"
+    const val ktor_client_serialization = "io.ktor:ktor-client-serialization:${Versions.ktor}"
+
+
 }

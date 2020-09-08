@@ -37,6 +37,10 @@ kotlin {
 //                api( Deps.kodein )
                 implementation( Deps.kotlinx_coroutines )
                 implementation( Deps.ktor_client )
+                implementation( Deps.ktor_client_serialization )
+                implementation( Deps.ktor_client_json )
+                implementation( Deps.ktor_client_logging )
+
                 api( Deps.klock )
                 api( Deps.klogger )
             }
