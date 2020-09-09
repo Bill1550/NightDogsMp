@@ -9,7 +9,7 @@ object Versions {
     const val klock = "1.12.0"
     const val klogger = "1.11.0"
 
-    const val kodein = "7.0.0" // not compatible with kotlin 1.4.0
+    const val kodein = "7.1.0-master-80" // From Bintray, dev version that supports 1.4.0
 
     const val kotlin = "1.4.0"
     const val kotlinx_coroutines = "1.3.9"

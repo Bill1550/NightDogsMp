@@ -10,6 +10,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     gradlePluginPortal()
+    maven("https://dl.bintray.com/kodein-framework/kodein-dev")
     google()
     jcenter()
 }
@@ -43,6 +44,7 @@ kotlin {
 
                 api( Deps.klock )
                 api( Deps.klogger )
+                api( Deps.kodein )
             }
         }
 
