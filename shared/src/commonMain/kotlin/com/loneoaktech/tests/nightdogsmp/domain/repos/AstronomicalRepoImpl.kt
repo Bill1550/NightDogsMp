@@ -13,6 +13,8 @@ class AstronomicalRepoImpl(
 
     override suspend fun getSunTimes(location: Location): RiseAndSet {
 
+        val sunTimesUrl="https://api.sunrise-sunset.org/json" // arguments: ?lat=41.4&lng=73.3
+
         delay( 500 )
         return RiseAndSet(
                 bodyName = "sun",
