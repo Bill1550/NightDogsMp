@@ -11,6 +11,7 @@ repositories {
     google()
     jcenter()
     mavenCentral()
+    maven("https://dl.bintray.com/kodein-framework/kodein-dev")
 }
 
 dependencies {
@@ -19,6 +20,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("androidx.constraintlayout:constraintlayout:2.0.1")
 }
+
 android {
     compileSdkVersion(29)
     defaultConfig {
