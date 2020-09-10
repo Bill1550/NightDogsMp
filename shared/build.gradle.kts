@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     kotlin("multiplatform")
+    kotlin("plugin.serialization") version Versions.kotlin
     id("com.android.library")
     id("kotlin-android-extensions")
 }
@@ -10,7 +11,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     gradlePluginPortal()
-    maven("https://dl.bintray.com/kodein-framework/kodein-dev")
+//    maven("https://dl.bintray.com/kodein-framework/kodein-dev")
     google()
     jcenter()
 }
@@ -37,6 +38,8 @@ kotlin {
             dependencies {
 //                api( Deps.kodein )
                 implementation( Deps.kotlinx_coroutines )
+                implementation( Deps.kotlinx_serialization )
+
                 implementation( Deps.ktor_client )
                 implementation( Deps.ktor_client_serialization )
                 implementation( Deps.ktor_client_json )
@@ -44,7 +47,7 @@ kotlin {
 
                 api( Deps.klock )
                 api( Deps.klogger )
-                api( Deps.kodein )
+//                api( Deps.kodein )
             }
         }
 
@@ -81,11 +84,11 @@ kotlin {
 }
 
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(Versions.android_compile_sdk)
     sourceSets["main"].manifest.srcFile("src\\androidMain\\AndroidManifest.xml")
     defaultConfig {
-        minSdkVersion(24)
-        targetSdkVersion(29)
+        minSdkVersion(Versions.android_min_sdk)
+        targetSdkVersion(Versions.android_target_sdk)
         versionCode = 1
         versionName = "1.0"
     }

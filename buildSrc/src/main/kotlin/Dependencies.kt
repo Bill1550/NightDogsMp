@@ -2,8 +2,8 @@
 object Versions {
 
     const val android_min_sdk = 21
-    const val android_target_sdk = 29
-    const val android_compile_sdk = 29
+    const val android_target_sdk = 30
+    const val android_compile_sdk = 30
     const val android_gradle_plugin = "4.1.0-rc02"
 
     const val klock = "1.12.0"
@@ -30,7 +30,7 @@ object Deps {
 
     const val kotlinx_coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinx_coroutines}"
     const val kotlinx_datetime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinx_datetime}"
-    const val kotlinx_serialization = "org.jetbrains.kotlinx:kotlinx-serialization-core${Versions.kotlinx_serialization}"
+    const val kotlinx_serialization = "org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.kotlinx_serialization}"
 
     const val ktor_client = "io.ktor:ktor-client-core:${Versions.ktor}"
     const val ktor_client_json = "io.ktor:ktor-client-json:${Versions.ktor}"

@@ -22,11 +22,11 @@ dependencies {
 }
 
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(Versions.android_compile_sdk)
     defaultConfig {
         applicationId = "com.loneoaktech.tests.nightdogsmp.androidApp"
-        minSdkVersion(24)
-        targetSdkVersion(29)
+        minSdkVersion(Versions.android_min_sdk)
+        targetSdkVersion(Versions.android_target_sdk)
         versionCode = 1
         versionName = "1.0"
     }
