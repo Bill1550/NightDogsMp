@@ -1,9 +1,6 @@
- package com.loneoaktech.experimental.nightdogs.api.sun
+package com.loneoaktech.tests.nightdogsmp.domain.api.sun
 
 import com.loneoaktech.tests.nightdogsmp.domain.api.types.ApiTime
-import kotlinx.serialization.UseSerializers
-
-import com.soywiz.klock.Time
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -21,10 +18,6 @@ data class SunRiseSetResponse(
 
 /**
  * The results object returned by the end point.
- * @field:Json attributes are use to decouple the API field name from Kotlin class property name.
- *
- * Values tha@SerialName( are nullable so we don't get an error if they are missing.
- *
  */
 @Serializable
 data class SunRiseSetResults(
@@ -36,24 +29,24 @@ data class SunRiseSetResults(
     val sunset: ApiTime,
 
     @SerialName("solar_noon")
-    val solarNoon: ApiTime?,
+    val solarNoon: ApiTime? = null,
 
     @SerialName("civil_twilight_begin")
-    val civilTwilightBegin: ApiTime?,
+    val civilTwilightBegin: ApiTime? = null,
 
     @SerialName("civil_twilight_end")
-    val civilTwilightEnd: ApiTime?,
+    val civilTwilightEnd: ApiTime? = null,
 
     @SerialName("nautical_twilight_begin")
-    val nauticalTwilightBegin: ApiTime?,
+    val nauticalTwilightBegin: ApiTime? = null,
 
     @SerialName("nautical_twilight_end")
-    val NauticalTwilightEnd: ApiTime?,
+    val NauticalTwilightEnd: ApiTime? = null,
 
     @SerialName("astronomical_twilight_begin")
-    val astronomicalTwilightBegin: ApiTime?,
+    val astronomicalTwilightBegin: ApiTime? = null,
 
     @SerialName("astronomical_twilight_end")
-    val astronomicalTwilightEnd: ApiTime?
+    val astronomicalTwilightEnd: ApiTime? = null
 
 )

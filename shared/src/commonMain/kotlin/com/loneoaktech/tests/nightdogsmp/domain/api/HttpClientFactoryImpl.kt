@@ -7,7 +7,7 @@ import io.ktor.client.features.json.serializer.*
 import io.ktor.client.features.logging.*
 import io.ktor.client.features.json.JsonFeature
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonConfiguration
+
 
 class HttpClientFactoryImpl : HttpClientFactory{
 
@@ -48,5 +48,4 @@ class HttpClientFactoryImpl : HttpClientFactory{
 
         }
     }
-
 }

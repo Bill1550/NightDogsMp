@@ -54,6 +54,10 @@ kotlin {
 
         val commonTest by getting {
             dependencies {
+//                implementation( Deps.kotlinx_coroutines )
+//                implementation( Deps.kotlinx_serialization )
+//                implementation( Deps.klock )
+
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
             }
@@ -80,6 +84,8 @@ kotlin {
                 implementation(npm("react-dom", "16.13.1"))
             }
         }
+
+        val jsTest by getting
     }
 }
 

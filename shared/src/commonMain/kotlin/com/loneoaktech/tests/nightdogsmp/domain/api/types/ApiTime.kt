@@ -20,18 +20,21 @@ data class ApiTime(
     @Serializer( forClass = ApiTime::class )
     companion object : KSerializer<ApiTime> {
 
-        private val timeFormat = TimeFormat("hh:mm:ss a")
+        private val timeFormat = TimeFormat("h:mm:ss a")
 
         override val descriptor: SerialDescriptor
             get() = PrimitiveSerialDescriptor("Time", PrimitiveKind.STRING)
 
         override fun deserialize(decoder: Decoder): ApiTime {
-            return ApiTime( timeFormat.parseTime(decoder.decodeString()) )
+            return ApiTime( timeFormat.parseTime(decoder.decodeString().toLowerCase()) )
         }
 
         override fun serialize(encoder: Encoder, value: ApiTime) {
             encoder.encodeString( timeFormat.format( value.value ) )
         }
 
+        fun fromTime( time: Time) = ApiTime(time)
     }
+
+    fun toTime(): Time = value
 }
