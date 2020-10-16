@@ -16,7 +16,7 @@ buildscript {
     dependencies {
         // The wizard apparently adds this class path to permit legacy apply in the subproject gradle
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}")
-        classpath("com.android.tools.build:gradle:${Versions.android_gradle_plugin}")
+        classpath("com.android.tools.build:gradle:4.1.0-rc03")
     }
 }
 group = "com.loneoaktech.tests.nightdogsmp"

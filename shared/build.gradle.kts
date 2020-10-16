@@ -36,9 +36,8 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-//                api( Deps.kodein )
-                implementation( Deps.kotlinx_coroutines )
-                implementation( Deps.kotlinx_serialization )
+                api( Deps.kotlinx_coroutines )
+                api( Deps.kotlinx_serialization )
 
                 implementation( Deps.ktor_client )
                 implementation( Deps.ktor_client_serialization )
@@ -47,16 +46,15 @@ kotlin {
 
                 api( Deps.klock )
                 api( Deps.klogger )
-//                api( Deps.kodein )
             }
         }
 
 
         val commonTest by getting {
             dependencies {
-//                implementation( Deps.kotlinx_coroutines )
-//                implementation( Deps.kotlinx_serialization )
-//                implementation( Deps.klock )
+                implementation( Deps.kotlinx_coroutines )
+                implementation( Deps.kotlinx_serialization )
+                implementation( Deps.klock )
 
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))

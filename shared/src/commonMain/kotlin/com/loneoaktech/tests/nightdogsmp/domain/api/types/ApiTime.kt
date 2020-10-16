@@ -12,7 +12,15 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-
+/**
+ * A wrapper around a Klock Time that allows it to be serialized/deserialized.
+ *
+ * Handles the time formatting as returned by the Sunrise/Sunset API. (Could
+ * obviously be generalized).
+ *
+ * Also saves the problem that Klock Time is implemented as a value type, which
+ * aren't currently supported by Kotlin Serialization.
+ */
 data class ApiTime(
     val value: Time
 ) {

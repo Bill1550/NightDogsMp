@@ -3,10 +3,11 @@ package com.loneoaktech.tests.nightdogsmp.domain.api
 import com.soywiz.klock.seconds
 import io.ktor.client.*
 import io.ktor.client.features.*
+import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
 import io.ktor.client.features.logging.*
-import io.ktor.client.features.json.JsonFeature
-import kotlinx.serialization.json.Json
+
+//import kotlinx.serialization.json.Json
 
 
 class HttpClientFactoryImpl : HttpClientFactory{
@@ -15,14 +16,8 @@ class HttpClientFactoryImpl : HttpClientFactory{
         return HttpClient {
 
             install(JsonFeature) {
-                serializer = KotlinxSerializer(
-                    json = Json {
-                                encodeDefaults = false
-                                ignoreUnknownKeys = true
-                                isLenient = true
-                            }
-                )
-
+                serializer = defaultSerializer()
+//                serializer = KotlinxSerializer() // apparently not available on JS
             }
 
 

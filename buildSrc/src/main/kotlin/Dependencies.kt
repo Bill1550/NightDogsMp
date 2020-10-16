@@ -12,7 +12,7 @@ object Versions {
     const val kodein = "7.1.0-master-80" // From Bintray, dev version that supports 1.4.0
 
     const val kotlin = "1.4.10"
-    const val kotlinx_coroutines = "1.3.9"
+    const val kotlinx_coroutines = "1.4.0-M1"
     const val kotlinx_datetime = "0.1.0"
     const val kotlinx_serialization = "1.0.0-RC2"
     const val kotlinx_html = "0.7.2"
