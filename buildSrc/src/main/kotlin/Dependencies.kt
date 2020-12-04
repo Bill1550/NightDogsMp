@@ -4,20 +4,21 @@ object Versions {
     const val android_min_sdk = 21
     const val android_target_sdk = 30
     const val android_compile_sdk = 30
-    const val android_gradle_plugin = "4.1.0-rc02"
+    const val android_gradle_plugin = "4.1.0"
 
     const val klock = "1.12.0"
     const val klogger = "1.11.0"
 
     const val kodein = "7.1.0-master-80" // From Bintray, dev version that supports 1.4.0
 
-    const val kotlin = "1.4.10"
-    const val kotlinx_coroutines = "1.4.0-M1"
+    const val kotlin = "1.4.20"
+    const val kotlinx_coroutines = "1.4.1"
     const val kotlinx_datetime = "0.1.0"
-    const val kotlinx_serialization = "1.0.0-RC2"
+    const val kotlinx_serialization = "1.0.1"
     const val kotlinx_html = "0.7.2"
+    const val kotlinx_atomic_fu = "0.14.4"
 
-    const val ktor = "1.4.0"
+    const val ktor = "1.4.1"
 }
 
 
